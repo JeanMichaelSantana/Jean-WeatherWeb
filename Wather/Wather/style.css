@@ -1,0 +1,130 @@
+/* style.css - Diseño Neón Azul Oscuro */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #0a0a1f 0%, #1a0033 100%);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Efectos neón generales */
+.neon-title {
+    text-shadow: 
+        0 0 10px #00ffff,
+        0 0 20px #00ffff,
+        0 0 40px #0088ff,
+        0 0 60px #0088ff;
+    letter-spacing: 2px;
+}
+
+.text-cyan {
+    color: #00ffff !important;
+}
+
+/* Input de búsqueda neón */
+.neon-input {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    border: 2px solid #00ffff !important;
+    color: white !important;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+    transition: all 0.3s ease;
+}
+
+.neon-input:focus {
+    border-color: #00ccff !important;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.8);
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.85) !important;
+}
+
+.neon-btn {
+    background: linear-gradient(45deg, #00ffff, #0088ff);
+    border: none;
+    color: #000;
+    font-weight: bold;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.7);
+    transition: all 0.3s ease;
+}
+
+.neon-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.9);
+    background: linear-gradient(45deg, #00ccff, #0066cc);
+}
+
+/* Tarjeta neón */
+.neon-card {
+    background: rgba(15, 15, 40, 0.95) !important;
+    border: 2px solid #00ffff;
+    border-radius: 20px;
+    box-shadow: 
+        0 0 30px rgba(0, 255, 255, 0.6),
+        inset 0 0 20px rgba(0, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    transition: all 0.4s ease;
+}
+
+.neon-card:hover {
+    box-shadow: 
+        0 0 40px rgba(0, 255, 255, 0.8),
+        inset 0 0 30px rgba(0, 255, 255, 0.3);
+    transform: translateY(-5px);
+}
+
+/* Parámetros del clima */
+.param {
+    background: rgba(0, 255, 255, 0.08);
+    padding: 12px 15px;
+    border-radius: 12px;
+    border-left: 4px solid #00ffff;
+    transition: all 0.3s ease;
+}
+
+.param:hover {
+    background: rgba(0, 255, 255, 0.15);
+    transform: translateX(5px);
+}
+
+.param strong {
+    color: #00ccff;
+    font-size: 0.95rem;
+}
+
+.param .value {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: white;
+}
+
+/* Botón cerrar */
+.btn-close-white {
+    filter: brightness(0) invert(1);
+}
+
+/* Efecto adicional para el icono del clima */
+.weather-icon {
+    filter: drop-shadow(0 0 20px #00ffff);
+    transition: transform 0.4s ease;
+}
+
+.neon-card:hover .weather-icon {
+    transform: scale(1.08);
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+    .neon-title {
+        font-size: 2.5rem;
+    }
+    
+    .neon-card {
+        max-width: 95% !important;
+    }
+}
